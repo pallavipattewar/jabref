@@ -40,6 +40,10 @@ plugins {
 
 apply plugin: XjcPlugin
 
+apply plugin: 'maven-publish'
+
+apply plugin: 'java'
+
 apply from: 'eclipse.gradle'
 
 group = "org.jabref"
