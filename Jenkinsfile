@@ -5,23 +5,10 @@ pipeline {
         stage('Build Stage') {
             steps {
                 script{
-                bat "mvn -B -DskipTests clean package"
+                bat "gradle build"
                   }
             }
         }
-                stage('Testing Stage') {
-		steps {
-			script {
-				bat "mvn test"
-			}
-			
-		}
-		post{
-                          always{
-                              	junit "**/target/surefire-reports/TEST-org.joda.time.TestAllPackages.xml"
-				          
-                                }
-                     }
-	}
+                
     }
 }
