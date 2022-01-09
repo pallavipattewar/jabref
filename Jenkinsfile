@@ -5,7 +5,8 @@ pipeline {
         stage('Build Stage') {
             steps {
                 script{
-                bat "gradlew build --scan"
+                bat "gradlew build -DskipTests --scan"
+                   
                     }
             }
         }
